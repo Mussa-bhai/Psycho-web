@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Types</title>
+    <style>
+*{
+box-sizing: border-box
+}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #tabs {
+            display: flex;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .tablink {
+            flex: 5;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            color: #ffffff;
+            margin: 0 1px;
+            border-radius: 8px;
+            z-index: 3;
+           
+        }
+
+        .tablink.analyst {
+            background-color: #16a085;
+        }
+
+        .tablink.diplomat {
+            background-color: #f39c12;
+        }
+
+        .tablink.sentinel {
+            background-color: #3498db;
+        }
+
+        .tablink.explorer {
+            background-color: #9b59b6;
+        }
+
+        .tablink:hover {
+            background-color: #aaa;
+        }
+
+        .tabcontent {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            border-radius: 25px;
+            margin: 0 5%;
+            color: #000000;
+            box-shadow: 0 0 10px 10px rgba(200, 200, 200, 1);
+            z-index: 2;
+        }
+
+        .tabcontent.analyst {
+            background-color: #16a085;
+        }
+
+        .tabcontent.Diplomat {
+            background-color: #f39c12;
+        }
+
+        .tabcontent.Sentinel {
+            background-color: #3498db;
+        }
+
+        .tabcontent.Explorer {
+            background-color: #9b59b6;
+        }
+
+        h2 {
+            color: inherit;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: calc(25% - 20px); /* Four cards per row */
+            position: relative;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .card-description {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .card-link {
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 15px;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .bookmark {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <button class="tablink analyst" onclick="openTab('Analyst')">Analyst</button>
+        <button class="tablink diplomat" onclick="openTab('Diplomat')">Diplomat</button>
+        <button class="tablink sentinel" onclick="openTab('Sentinel')">Sentinel</button>
+        <button class="tablink explorer" onclick="openTab('Explorer')">Explorer</button>
+    </div>
+
+    <div id="Analyst" class="tabcontent analyst">
+        <h2>Analyst</h2>
+        <div class="cards-container">
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-1.jpg" alt="Analyst Image 1">
+                <div class="card-title">Fictional Analyst 1</div>
+                <div class="card-description">Short description of the first card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-2.jpg" alt="Analyst Image 2">
+                <div class="card-title">Fictional Analyst 2</div>
+                <div class="card-description">Short description of the second card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-3.jpg" alt="Analyst Image 3">
+                <div class="card-title">Fictional Analyst 3</div>
+                <div class="card-description">Short description of the third card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-4.jpg" alt="Analyst Image 4">
+                <div class="card-title">Fictional Analyst 4</div>
+                <div class="card-description">Short description of the fourth card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+        </div>
+    </div> 
+    
+    <div id="Diplomat" class="tabcontent Diplomat">
+        <h2>Diplomat</h2>
+        <div class="cards-container">
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-1.jpg" alt="Diplomat Image 1">
+                <div class="card-title">Fictional Diplomat 1</div>
+                <div class="card-description">Short description of the first card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-2.jpg" alt="Diplomat Image 2">
+                <div class="card-title">Fictional Diplomat 2</div>
+                <div class="card-description">Short description of the second card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-3.jpg" alt="Diplomat Image 3">
+                <div class="card-title">Fictional Diplomat 3</div>
+                <div class="card-description">Short description of the third card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-4.jpg" alt="Diplomat Image 4">
+                <div class="card-title">Fictional Diplomat 4</div>
+                <div class="card-description">Short description of the fourth card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div id="Sentinel" class="tabcontent Sentinel">
+        <h2>Sentinel</h2>
+        <div class="cards-container">
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-1.jpg" alt="Sentinel Image 1">
+                <div class="card-title">Fictional Sentinel 1</div>
+                <div class="card-description">Short description of the first card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-2.jpg" alt="Sentinel Image 2">
+                <div class="card-title">Fictional Sentinel 2</div>
+                <div class="card-description">Short description of the second card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-3.jpg" alt="Sentinel Image 3">
+                <div class="card-title">Fictional Sentinel 3</div>
+                <div class="card-description">Short description of the third card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-4.jpg" alt="Sentinel Image 4">
+                <div class="card-title">Fictional Sentinel 4</div>
+                <div class="card-description">Short description of the fourth card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+        </div>
+    </div> <div id="Explorer" class="tabcontent Explorer">
+        <h2>Explorer</h2>
+        <div class="cards-container">
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-1.jpg" alt="Explorer Image 1">
+                <div class="card-title">Fictional Explorer 1</div>
+                <div class="card-description">Short description of the first card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-2.jpg" alt="Explorer Image 2">
+                <div class="card-title">Fictional Explorer 2</div>
+                <div class="card-description">Short description of the second card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-3.jpg" alt="Explorer Image 3">
+                <div class="card-title">Fictional Explorer 3</div>
+                <div class="card-description">Short description of the third card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+            <div class="card">
+                <span class="bookmark">&#9733;</span>
+                <img src="analyst-image-4.jpg" alt="Explorer Image 4">
+                <div class="card-title">Fictional Explorer 4</div>
+                <div class="card-description">Short description of the fourth card.</div>
+                <a href="#" class="card-link">Read More</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function openTab(tabName) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+        // By default, display the first tab
+        openTab("Analyst");
+    </script>
+</body>
+</html>
